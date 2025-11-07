@@ -5,6 +5,8 @@
 			{
 				"name": "AzureSQLtoLake",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "last_cdc",
@@ -68,7 +70,11 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "bronze",
-							"folder": "Users"
+							"folder": "Users",
+							"file": {
+								"value": "@concat{pipeline().parameters.table,'_',variables('current')}",
+								"type": "Expression"
+							}
 						}
 					}
 				]
@@ -112,6 +118,8 @@
 			{
 				"name": "current",
 				"type": "SetVariable",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"secureOutput": false,
