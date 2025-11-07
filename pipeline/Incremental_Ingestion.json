@@ -5,13 +5,9 @@
 			{
 				"name": "AzureSQLtoLake",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
-					{
-						"activity": "last_cdc",
-						"dependencyConditions": [
-							"Completed"
-						]
-					},
 					{
 						"activity": "current",
 						"dependencyConditions": [
@@ -116,6 +112,8 @@
 			{
 				"name": "current",
 				"type": "SetVariable",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"secureOutput": false,
