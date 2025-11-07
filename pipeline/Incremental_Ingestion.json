@@ -130,7 +130,7 @@
 			}
 		],
 		"parameters": {
-			"Schema": {
+			"schema": {
 				"type": "string"
 			},
 			"table": {
