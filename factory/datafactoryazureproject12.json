@@ -1,0 +1,9 @@
+{
+	"name": "datafactoryazureproject12",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9b02c6d1-454c-4f99-a815-885675141535",
+		"tenantId": "6b5ad04f-b7a1-4c79-962d-4da59a1771fe"
+	}
+}
